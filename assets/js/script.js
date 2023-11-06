@@ -50,19 +50,35 @@ for (let i = 0; i < nbrJoueur; i++) {
     const vie = Character.aleatoire(20, 100);
     const attaque = Character.aleatoire(20, 100);
     const defense = Character.aleatoire(20, 100);
-    
+
     const player = new Character(nom, vie, attaque, defense);
     player.info();
-    
+
     players.push(player);
-}
-
-let attaquant
-let defenseur
-
-function run () {
 
 }
+
+
+function run(){
+    while (players[0].existe === true  && players[1].existe === true){
+        players[0].attaquer(players[1])
+
+    }
+}
+run();
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // let perso1 = new character("CRS", character.aleatoire(20, 100), character.aleatoire(20, 100), character.aleatoire(20, 100));
